@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
 		{
 			jump = true;
 		}
-		Debug.Log("Current vertical velocity: " + m_Rigidbody2D.velocity.y);
+		//Debug.Log("Current vertical velocity: " + m_Rigidbody2D.velocity.y);
 		if (verticalMove < 2.5f && verticalMove > -2.5f)
 		{
 			animator.SetBool("IsAerial", false);
