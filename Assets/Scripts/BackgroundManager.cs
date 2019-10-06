@@ -6,6 +6,7 @@ using Cinemachine;
 public class BackgroundManager : MonoBehaviour
 {
 
+    [SerializeField] CinemachineVirtualCameraBase cam;
     [SerializeField] GameObject background;
     [SerializeField] GameObject foreground;
 
@@ -21,16 +22,12 @@ public class BackgroundManager : MonoBehaviour
     [SerializeField] float foregroundXPosOffset = 0;
     [SerializeField] float foregroundYPosOffset = 0;
 
-
-
-    private CinemachineVirtualCameraBase cam;
     private Material backMat;
     private Material foreMat;
 
     // Start is called before the first frame update
     void Start()
     {
-        cam = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCameraBase>();
         backMat = background.GetComponent<Renderer>().material;
         foreMat = foreground.GetComponent<Renderer>().material;
     }
